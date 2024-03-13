@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tienda.NetMaui.Paginas.PorNombre"
+             Title="PorNombre">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Picker x:Name="Producto"
+                    Title="Seleccione Producto"
+                    TitleColor="#000000"
+                    TextColor="Fuchsia"
+                    BackgroundColor="Beige"
+                    SelectedIndexChanged="Producto_SelectedIndexChanged">
+            </Picker>
+            <Button Text="Visualizar"
+                    Padding="10"
+                    HorizontalOptions="Center"
+                    x:Name="DatosPorProducto"
+                    Clicked="DatosPorProducto_Clicked">
+            </Button>
+            <CollectionView x:Name="collectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="70"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"
+                                   Grid.Row="0"
+                                   Text="{Binding Nombre}"
+                                   FontAttributes="Bold">
+                            </Label>
+                            <Label Grid.Column="1"
+                                   Grid.Row="0"
+                                   Text="{Binding Presentacion}"
+                                   FontAttributes="Bold">
+                            </Label>
+                            <Label Grid.Column="2"
+                                   Grid.Row="0"
+                                   Text="{Binding PMayoreo}"
+                                   FontAttributes="Bold">
+                            </Label>
+                            <Label Grid.Column="3"
+                                   Grid.Row="0"
+                                   Text="{Binding PMenudeo}"
+                                   FontAttributes="Bold">
+                            </Label>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

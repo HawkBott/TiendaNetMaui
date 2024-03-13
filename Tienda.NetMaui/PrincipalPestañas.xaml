@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tienda.NetMaui.PrincipalPestañas"
+             xmlns:Local="clr-namespace:Tienda.NetMaui.Paginas"
+            xmlns:Pestanas="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+            Pestanas:TabbedPage.ToolbarPlacement="Bottom">
+    
+    <Local:Listar Title="Listar" IconImageSource="dotnet_bot.png"></Local:Listar>
+    <Local:ListarImg Title="ListarImg" IconImageSource="dotnet_bot.png"></Local:ListarImg>
+    <Local:PorNombre Title="PorNombre" IconImageSource="dotnet_bot.png"></Local:PorNombre>
+</TabbedPage>
